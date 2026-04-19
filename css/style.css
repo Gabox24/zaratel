@@ -1,0 +1,112 @@
+/* Configuración General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #0f0f0f; /* Fondo oscuro elegante */
+    overflow: hidden;
+}
+
+/* Fondo con Gradiente Animado */
+.background-animation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #808000, #DEB887, #808000);
+    background-size: 400% 400%;
+    z-index: -1;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Contenedor Principal */
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    padding: 40px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px); /* Efecto cristal */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    box-shadow: 0 25px 45px rgba(0,0,0,0.5);
+    animation: fadeIn 1.2s ease-out;
+}
+
+.logo {
+    width: 200px;
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.2));
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+h1 {
+    color: white;
+    letter-spacing: 5px;
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+p {
+    color: #888;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+/* Botones de Enlace */
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.link-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.link-card i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+/* Efectos de Interacción */
+.link-card:hover {
+    background: white;
+    color: black;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255,255,255,0.1);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
